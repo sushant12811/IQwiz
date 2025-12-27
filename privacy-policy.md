@@ -30,19 +30,19 @@ No data is shared with third parties
 
 No data is used for analytics or advertising
 
-3. Third-Party Services
+# 3. Third-Party Services
 
 IQwiz does not use any third-party services that collect user data.
 
-4. Children’s Privacy
+# 4. Children’s Privacy
 
 IQwiz does not knowingly collect any personal information from children or users of any age.
 
-5. Changes to This Policy
+# 5. Changes to This Policy
 
 This Privacy Policy may be updated in the future. Any changes will be reflected on this page.
 
-6. Contact
+# 6. Contact
 
 If you have questions about this Privacy Policy, you may contact:
 
