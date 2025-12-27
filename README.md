@@ -1,13 +1,13 @@
-#IQwiz – Coding Quiz App for Developers
+# IQwiz –  Quiz App for Developers
 
-#Description
+## Description
 
 IQwiz is a fun and interactive swift quiz app designed for entry to junior levels. Test your skills, learn from explanations, and track your progress across many questions.
 
 Perfect for learning, practicing  or preparing for interviews.
 Free to use — no ads or in-app purchases.
 
-#Features
+## Features
 Multiple Questions to boost knowledge.
 
 Instant feedback for correct and wrong answers.
@@ -21,7 +21,7 @@ Quit anytime.
 Simple and clean interface.
 
 
-#Screenshots
+## Screenshots
 <table>
   <tr>
 <td><img width="1290" height="2796" alt="Simulator Screenshot - iPhone 14 Pro Max - 2025-12-27 at 01 39 09" src="https://github.com/user-attachments/assets/1c9017e1-8329-4b2c-b2a1-e73f566f087e"  width="200"/></td>
@@ -35,7 +35,8 @@ Simple and clean interface.
 <td><img width="1290" height="2796" alt="Simulator Screenshot - iPhone 14 Pro Max - 2025-12-27 at 01 28 06" src="https://github.com/user-attachments/assets/3032b03d-6850-4261-a0ff-fdc14cd67249" width="300" /></td>
 </tr>
 </table>
-#Installation
+
+## Installation
 Clone the repository:
 git clone https://github.com/Sushant12811/IQwiz.git
 
@@ -43,7 +44,7 @@ Open IQwiz.xcodeproj or IQwiz.xcworkspace in Xcode
 
 Build and run on your simulator or device
 
-#Contributing
+## Contributing
 This is a personal project for learning purposes. Feel free to open issues or fork the repository if you want to experiment with it.
 
 #Support
