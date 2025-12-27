@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "question": "Which language is primarily used for iOS app development?",
+    "options": [
+      "Kotlin",
+      "Swift",
+      "Java",
+      "Dart"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This language was introduced by Apple in 2014 as a modern replacement for Objective-C."
+  },
+  {
+    "id": 2,
+    "question": "Which keyword is used to create a constant in Swift?",
+    "options": [
+      "var",
+      "const",
+      "let",
+      "final"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "Constants in Swift use a three-letter keyword that prevents value changes."
+  },
+  {
+    "id": 3,
+    "question": "Which keyword is used to create a variable in Swift?",
+    "options": [
+      "let",
+      "var",
+      "mut",
+      "variable"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This three-letter keyword allows you to change values after initialization."
+  },
+  {
+    "id": 4,
+    "question": "What symbol is used to indicate an optional type in Swift?",
+    "options": [
+      "!",
+      "?",
+      "*",
+      "&"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This punctuation mark indicates a value might be nil."
+  },
+  {
+    "id": 5,
+    "question": "Which framework is used for building modern declarative UI in iOS?",
+    "options": [
+      "UIKit",
+      "AppKit",
+      "SwiftUI",
+      "CoreUI"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "This framework was announced at WWDC 2019 and uses declarative syntax."
+  },
+  {
+    "id": 6,
+    "question": "What does UI stand for in iOS development?",
+    "options": [
+      "Universal Interface",
+      "User Interface",
+      "Unified Input",
+      "Unique Identifier"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This refers to everything users see and interact with on screen."
+  },
+  {
+    "id": 7,
+    "question": "Which collection type stores key-value pairs?",
+    "options": [
+      "Array",
+      "Set",
+      "Dictionary",
+      "Tuple"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "This collection lets you look up values using unique keys."
+  },
+  {
+    "id": 8,
+    "question": "Which collection type stores ordered elements?",
+    "options": [
+      "Array",
+      "Set",
+      "Dictionary",
+      "Stack"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "This collection maintains the order of elements using numeric indices."
+  },
+  {
+    "id": 9,
+    "question": "What is the correct way to write a comment in Swift?",
+    "options": [
+      "# This is a comment",
+      "// This is a comment",
+      "<!-- This is a comment -->",
+      "/* This is a comment"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "Single-line comments start with two forward slashes."
+  },
+  {
+    "id": 10,
+    "question": "Which property wrapper is used for simple local state in SwiftUI?",
+    "options": [
+      "@Binding",
+      "@State",
+      "@Published",
+      "@Observable"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This wrapper stores data that belongs to and is managed by the view itself."
+  },
+  {
+    "id": 11,
+    "question": "What does API stand for?",
+    "options": [
+      "Apple Programming Interface",
+      "Application Programming Interface",
+      "Advanced Program Integration",
+      "Automated Process Interaction"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This allows different software systems to communicate with each other."
+  },
+  {
+    "id": 12,
+    "question": "Which data type is used for whole numbers in Swift?",
+    "options": [
+      "Float",
+      "Double",
+      "Int",
+      "Number"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "This three-letter type stores integers without decimal points."
+  },
+  {
+    "id": 13,
+    "question": "Which data type is used for text in Swift?",
+    "options": [
+      "Text",
+      "String",
+      "Char",
+      "Word"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This type represents a sequence of characters."
+  },
+  {
+    "id": 14,
+    "question": "What is the correct syntax for an if statement in Swift?",
+    "options": [
+      "if (condition) { }",
+      "if condition { }",
+      "if condition then { }",
+      "Both A and B"
+    ],
+    "correctAnswerIndex": 3,
+    "hint": "Swift allows if statements with or without parentheses around the condition."
+  },
+  {
+    "id": 15,
+    "question": "Which loop is used to iterate over a range of numbers?",
+    "options": [
+      "while",
+      "for-in",
+      "repeat-while",
+      "foreach"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This loop uses 'in' keyword to iterate through ranges or collections."
+  },
+  {
+    "id": 16,
+    "question": "What does JSON stand for?",
+    "options": [
+      "Java Standard Object Notation",
+      "JavaScript Object Notation",
+      "Just Simple Object Names",
+      "Joint System Object Network"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This lightweight data format is commonly used for API responses."
+  },
+  {
+    "id": 17,
+    "question": "Which type is used for true/false values?",
+    "options": [
+      "Binary",
+      "Bit",
+      "Bool",
+      "Boolean"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "Swift uses a four-letter type name for true/false values."
+  },
+  {
+    "id": 18,
+    "question": "What is a function in Swift?",
+    "options": [
+      "A type of variable",
+      "A reusable block of code",
+      "A data structure",
+      "A debugging tool"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "Functions let you organize code into named, reusable pieces."
+  },
+  {
+    "id": 19,
+    "question": "Which keyword is used to define a function in Swift?",
+    "options": [
+      "function",
+      "def",
+      "func",
+      "method"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "This four-letter keyword starts all function definitions."
+  },
+  {
+    "id": 20,
+    "question": "What is Xcode?",
+    "options": [
+      "A programming language",
+      "Apple's IDE for development",
+      "A testing framework",
+      "A design tool"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This is Apple's integrated development environment for building apps."
+  },
+  {
+    "id": 21,
+    "question": "Which view container stacks views vertically in SwiftUI?",
+    "options": [
+      "HStack",
+      "VStack",
+      "ZStack",
+      "List"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "The 'V' in this container stands for vertical."
+  },
+  {
+    "id": 22,
+    "question": "Which view container stacks views horizontally in SwiftUI?",
+    "options": [
+      "HStack",
+      "VStack",
+      "ZStack",
+      "Row"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "The 'H' in this container stands for horizontal."
+  },
+  {
+    "id": 23,
+    "question": "What is a simulator in iOS development?",
+    "options": [
+      "A real iPhone device",
+      "A virtual device for testing",
+      "A code editor",
+      "A debugging console"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This tool lets you test apps without a physical device."
+  },
+  {
+    "id": 24,
+    "question": "Which method adds spacing around a view in SwiftUI?",
+    "options": [
+      ".margin()",
+      ".padding()",
+      ".spacing()",
+      ".border()"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This modifier adds internal space around view content."
+  },
+  {
+    "id": 25,
+    "question": "What does 'nil' represent in Swift?",
+    "options": [
+      "Zero",
+      "Empty string",
+      "Absence of a value",
+      "False"
+    ],
+    "correctAnswerIndex": 2,
+    "hint": "This keyword indicates an optional has no value."
+  },
+  {
+    "id": 26,
+    "question": "Which file extension is used for Swift source code?",
+    "options": [
+      ".swift",
+      ".sw",
+      ".ios",
+      ".apple"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "Swift files use the language name as their extension."
+  },
+  {
+    "id": 27,
+    "question": "What does App Store Connect allow developers to do?",
+    "options": [
+      "Write code faster",
+      "Submit and manage apps",
+      "Debug applications",
+      "Design interfaces"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This platform is used to upload and manage apps for the App Store."
+  },
+  {
+    "id": 28,
+    "question": "Which SwiftUI view displays text?",
+    "options": [
+      "Label",
+      "Text",
+      "TextView",
+      "String"
+    ],
+    "correctAnswerIndex": 1,
+    "hint": "This simple view has the same name as its purpose."
+  },
+  {
+    "id": 29,
+    "question": "What is the purpose of the return keyword?",
+    "options": [
+      "To exit a function with a value",
+      "To start a loop",
+      "To declare variables",
+      "To import libraries"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "This keyword sends a value back from a function to its caller."
+  },
+  {
+    "id": 30,
+    "question": "Which operator is used for addition in Swift?",
+    "options": [
+      "+",
+      "add",
+      "plus",
+      "sum"
+    ],
+    "correctAnswerIndex": 0,
+    "hint": "Swift uses the standard mathematical symbol for addition."
+  }
+]
