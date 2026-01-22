@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "question": "Which language is primarily used for iOS app development?",
+    "options": ["Kotlin", "Swift", "Java", "Dart"],
+    "correctAnswerIndex": 1,
+    "hint": "This language was introduced by Apple in 2014 as a modern replacement for Objective-C."
+  },
+  {
+    "id": 2,
+    "question": "Which keyword is used to create a constant in Swift?",
+    "options": ["var", "const", "let", "final"],
+    "correctAnswerIndex": 2,
+    "hint": "Constants in Swift use a three-letter keyword that prevents value changes."
+  },
+  {
+    "id": 3,
+    "question": "Which keyword is used to create a variable in Swift?",
+    "options": ["let", "var", "mut", "variable"],
+    "correctAnswerIndex": 1,
+    "hint": "This three-letter keyword allows you to change values after initialization."
+  },
+  {
+    "id": 4,
+    "question": "What does 'UI' stand for in UIKit?",
+    "options": ["Universal Interface", "User Interface", "Unified Integration", "Update Interface"],
+    "correctAnswerIndex": 1,
+    "hint": "It's what users see and interact with on their screens."
+  },
+  {
+    "id": 5,
+    "question": "Which protocol must a class adopt to be used as a table view data source?",
+    "options": ["UITableViewDelegate", "UITableViewDataSource", "UITableViewProtocol", "TableDataProvider"],
+    "correctAnswerIndex": 1,
+    "hint": "This protocol provides the data that populates the table view's cells."
+  },
+  {
+    "id": 6,
+    "question": "What is the main thread in iOS also called?",
+    "options": ["Background Thread", "UI Thread", "Worker Thread", "System Thread"],
+    "correctAnswerIndex": 1,
+    "hint": "All UI updates must happen on this thread to prevent crashes and ensure smooth performance."
+  },
+  {
+    "id": 7,
+    "question": "Which attribute makes a property observable in SwiftUI?",
+    "options": ["@Observable", "@State", "@Binding", "@Published"],
+    "correctAnswerIndex": 1,
+    "hint": "This property wrapper is used for simple value types within a single view."
+  },
+  {
+    "id": 8,
+    "question": "What does ARC stand for in Swift?",
+    "options": ["Automatic Reference Counting", "Auto Release Control", "Allocated Resource Counter", "Advanced Runtime Compiler"],
+    "correctAnswerIndex": 0,
+    "hint": "This memory management system automatically tracks and manages your app's memory usage by counting references."
+  },
+  {
+    "id": 9,
+    "question": "Which method is called when a view controller's view is loaded into memory?",
+    "options": ["viewDidAppear", "viewDidLoad", "loadView", "viewWillAppear"],
+    "correctAnswerIndex": 1,
+    "hint": "This lifecycle method is called once, right after the view hierarchy is loaded, and is perfect for initial setup."
+  },
+  {
+    "id": 10,
+    "question": "What is an optional in Swift?",
+    "options": ["A type that must have a value", "A type that can contain a value or nil", "A deprecated feature", "A compiler optimization"],
+    "correctAnswerIndex": 1,
+    "hint": "This type is marked with a '?' and represents the presence or absence of a value."
+  },
+  {
+    "id": 11,
+    "question": "Which symbol is used to safely unwrap an optional?",
+    "options": ["!", "?", "??", "?!"],
+    "correctAnswerIndex": 1,
+    "hint": "Optional chaining uses this symbol to safely access properties and methods on optional values."
+  },
+  {
+    "id": 12,
+    "question": "What does the '!' operator do with optionals?",
+    "options": ["Safe unwrapping", "Force unwrapping", "Optional chaining", "Nil coalescing"],
+    "correctAnswerIndex": 1,
+    "hint": "This operator forcefully extracts the value and will crash if the optional is nil."
+  },
+  {
+    "id": 13,
+    "question": "Which collection type stores unique unordered values?",
+    "options": ["Array", "Dictionary", "Set", "Tuple"],
+    "correctAnswerIndex": 2,
+    "hint": "This collection ensures no duplicates and is useful for membership testing."
+  },
+  {
+    "id": 14,
+    "question": "What is a closure in Swift?",
+    "options": ["A class method", "A self-contained block of functionality", "A memory leak", "A type of loop"],
+    "correctAnswerIndex": 1,
+    "hint": "Think of it as an anonymous function that can capture and store references to variables from its context."
+  },
+  {
+    "id": 15,
+    "question": "Which keyword is used to prevent a class from being subclassed?",
+    "options": ["sealed", "final", "private", "static"],
+    "correctAnswerIndex": 1,
+    "hint": "This keyword ensures no other class can inherit from this one."
+  },
+  {
+    "id": 16,
+    "question": "What does MVC stand for?",
+    "options": ["Model View Controller", "Main View Class", "Multiple View Container", "Model Variable Constant"],
+    "correctAnswerIndex": 0,
+    "hint": "This design pattern separates app logic into three interconnected components for better organization."
+  },
+  {
+    "id": 17,
+    "question": "Which file format is used for storyboards?",
+    "options": [".swift", ".xib", ".storyboard", ".plist"],
+    "correctAnswerIndex": 2,
+    "hint": "This XML-based file contains the visual representation of your app's screens and their connections."
+  },
+  {
+    "id": 18,
+    "question": "What is the purpose of a delegate in iOS?",
+    "options": ["To delete objects", "To enable communication between objects", "To create copies", "To manage memory"],
+    "correctAnswerIndex": 1,
+    "hint": "This design pattern allows one object to send messages to another object when certain events occur."
+  },
+  {
+    "id": 19,
+    "question": "Which access level makes a property accessible only within the same file?",
+    "options": ["private", "fileprivate", "internal", "public"],
+    "correctAnswerIndex": 1,
+    "hint": "This access modifier allows access anywhere within the defining source file, but not outside it."
+  },
+  {
+    "id": 20,
+    "question": "What is the default access level in Swift?",
+    "options": ["public", "private", "internal", "open"],
+    "correctAnswerIndex": 2,
+    "hint": "If you don't specify an access level, Swift uses this one, which allows access within the same module."
+  },
+  {
+    "id": 21,
+    "question": "Which framework is used for declarative UI in iOS?",
+    "options": ["UIKit", "SwiftUI", "CoreUI", "AppKit"],
+    "correctAnswerIndex": 1,
+    "hint": "Introduced in 2019, this modern framework lets you build UIs by describing what you want, not how to build it."
+  },
+  {
+    "id": 22,
+    "question": "What does JSON stand for?",
+    "options": ["Java Standard Object Notation", "JavaScript Object Notation", "Just Simple Object Names", "Joint System Object Network"],
+    "correctAnswerIndex": 1,
+    "hint": "This lightweight data format is commonly used for API responses and data exchange."
+  },
+  {
+    "id": 23,
+    "question": "Which protocol is used to make a type work with for-in loops?",
+    "options": ["Enumerable", "Sequence", "Iterable", "Loopable"],
+    "correctAnswerIndex": 1,
+    "hint": "Types conforming to this protocol can provide sequential access to their elements."
+  },
+  {
+    "id": 24,
+    "question": "What is the purpose of 'guard' statement?",
+    "options": ["To create loops", "To exit early from a function", "To define classes", "To import modules"],
+    "correctAnswerIndex": 1,
+    "hint": "This statement checks a condition and transfers control out of scope if the condition isn't met, improving readability."
+  },
+  {
+    "id": 25,
+    "question": "Which keyword is used to make a property computed?",
+    "options": ["computed", "get", "calculate", "dynamic"],
+    "correctAnswerIndex": 1,
+    "hint": "Computed properties don't store values but provide getter (and optionally setter) methods using this keyword."
+  },
+  {
+    "id": 26,
+    "question": "What is a retain cycle?",
+    "options": ["A loop that runs forever", "A memory leak caused by strong references", "A design pattern", "A type of animation"],
+    "correctAnswerIndex": 1,
+    "hint": "This occurs when two objects hold strong references to each other, preventing ARC from deallocating them."
+  },
+  {
+    "id": 27,
+    "question": "Which keyword breaks a retain cycle in closures?",
+    "options": ["strong", "weak", "unowned", "break"],
+    "correctAnswerIndex": 1,
+    "hint": "Use this keyword in a capture list [keyword self] to create a non-strong reference that becomes nil when deallocated."
+  },
+  {
+    "id": 28,
+    "question": "What does API stand for?",
+    "options": ["Application Programming Interface", "Apple Programming Integration", "Automated Process Interaction", "Advanced Program Implementation"],
+    "correctAnswerIndex": 0,
+    "hint": "This is a set of rules and protocols that allows different software applications to communicate with each other."
+  },
+  {
+    "id": 29,
+    "question": "Which method is used to perform network requests in modern Swift?",
+    "options": ["URLSession", "HTTPRequest", "NetworkManager", "WebFetch"],
+    "correctAnswerIndex": 0,
+    "hint": "This Apple framework class handles HTTP/HTTPS requests and is the standard for networking in iOS."
+  },
+  {
+    "id": 30,
+    "question": "What is the purpose of Codable protocol?",
+    "options": ["To create code", "To encode and decode data", "To compile Swift", "To debug apps"],
+    "correctAnswerIndex": 1,
+    "hint": "This protocol combines Encodable and Decodable, making it easy to convert between Swift types and JSON."
+  },
+  {
+    "id": 31,
+    "question": "Which type of initializer can fail and return nil?",
+    "options": ["Regular initializer", "Failable initializer", "Convenience initializer", "Required initializer"],
+    "correctAnswerIndex": 1,
+    "hint": "This initializer is marked with a '?' after the init keyword and can return nil if initialization fails."
+  },
+  {
+    "id": 32,
+    "question": "What is the difference between a struct and a class?",
+    "options": ["No difference", "Structs are value types, classes are reference types", "Structs are slower", "Classes can't have methods"],
+    "correctAnswerIndex": 1,
+    "hint": "Structs are copied when assigned or passed, while classes are referenced, affecting how changes propagate."
+  },
+  {
+    "id": 33,
+    "question": "Which Grand Central Dispatch function runs code on the main thread?",
+    "options": ["DispatchQueue.global()", "DispatchQueue.main", "DispatchQueue.background", "DispatchQueue.async"],
+    "correctAnswerIndex": 1,
+    "hint": "Use this queue when you need to update the UI after completing background work."
+  },
+  {
+    "id": 34,
+    "question": "What does the 'defer' statement do?",
+    "options": ["Delays execution by a time interval", "Executes code just before leaving the current scope", "Creates a background thread", "Prevents crashes"],
+    "correctAnswerIndex": 1,
+    "hint": "This statement is useful for cleanup code that must run regardless of how you exit a function (return, throw, etc.)."
+  },
+  {
+    "id": 35,
+    "question": "Which method is called repeatedly to render app frames?",
+    "options": ["drawRect", "draw(_:)", "render", "update"],
+    "correctAnswerIndex": 1,
+    "hint": "Override this UIView method to perform custom drawing using Core Graphics in the provided context."
+  },
+  {
+    "id": 36,
+    "question": "What is UserDefaults used for?",
+    "options": ["Database storage", "Storing small amounts of data persistently", "Network requests", "UI layout"],
+    "correctAnswerIndex": 1,
+    "hint": "This simple key-value storage is perfect for app settings and preferences, but not for large data sets."
+  },
+  {
+    "id": 37,
+    "question": "Which attribute tells the compiler to expose Swift code to Objective-C?",
+    "options": ["@available", "@objc", "@IBOutlet", "@escaping"],
+    "correctAnswerIndex": 1,
+    "hint": "Use this attribute when you need Swift methods or properties to be visible to Objective-C runtime."
+  },
+  {
+    "id": 38,
+    "question": "What is the purpose of @IBOutlet?",
+    "options": ["To create animations", "To connect Interface Builder views to code", "To make properties public", "To handle errors"],
+    "correctAnswerIndex": 1,
+    "hint": "This attribute creates a connection between your storyboard UI elements and your view controller properties."
+  },
+  {
+    "id": 39,
+    "question": "Which method is called when an app enters the background?",
+    "options": ["applicationDidEnterBackground", "applicationWillTerminate", "applicationWillResignActive", "applicationDidBecomeActive"],
+    "correctAnswerIndex": 0,
+    "hint": "This AppDelegate method is where you should save user data and release shared resources before the app is suspended."
+  },
+  {
+    "id": 40,
+    "question": "What does the ?? operator do?",
+    "options": ["Compare values", "Nil coalescing - provide a default value", "Force unwrap", "Create optionals"],
+    "correctAnswerIndex": 1,
+    "hint": "This operator returns the value from an optional if it contains one, otherwise returns the default value you provide."
+  }
+]

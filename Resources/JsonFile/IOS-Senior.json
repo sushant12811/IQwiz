@@ -1,0 +1,213 @@
+
+[
+  {
+    "id": 1,
+    "question": "What is the difference between MainActor and DispatchQueue.main?",
+    "options": ["They're identical", "MainActor is Swift Concurrency, enforced at compile-time with actor isolation", "MainActor is slower", "DispatchQueue.main is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "MainActor provides compile-time safety for UI updates in Swift's structured concurrency model, while DispatchQueue.main is a runtime concept from GCD that can't catch threading errors at compile time."
+  },
+  {
+    "id": 2,
+    "question": "How does the iOS app launch sequence work from main() to first view?",
+    "options": ["Direct to view", "main() → UIApplicationMain → App Delegate → Scene Delegate → Root VC", "Random order", "Only App Delegate"],
+    "correctAnswerIndex": 1,
+    "hint": "Understanding the complete launch sequence including @main attribute, UIApplicationMain function, app/scene delegate lifecycle, and window hierarchy is crucial for optimization and debugging startup issues."
+  },
+  {
+    "id": 3,
+    "question": "What is Existential Type in Swift and when does it impact performance?",
+    "options": ["A design pattern", "A container for protocol types that uses indirection and can cause heap allocation", "A deprecated feature", "A memory optimization"],
+    "correctAnswerIndex": 1,
+    "hint": "When you use a protocol as a type (like 'let x: Codable'), Swift creates an existential container with witness tables and value buffers, which adds overhead compared to concrete types or generics with type erasure."
+  },
+  {
+    "id": 4,
+    "question": "What is the difference between opaque types (some) and existential types in Swift?",
+    "options": ["No difference", "'some' returns a specific hidden type, existentials can hold any conforming type", "'some' is deprecated", "Existentials are faster"],
+    "correctAnswerIndex": 1,
+    "hint": "Opaque types (some Protocol) guarantee the same concrete type is returned, enabling optimizations. Existentials (Protocol) can change type at runtime, requiring dynamic dispatch and potentially heap allocation."
+  },
+  {
+    "id": 5,
+    "question": "How do you prevent priority inversion in concurrent programming?",
+    "options": ["Use only main thread", "Use QoS priority inheritance and avoid low priority locks on high priority paths", "Disable concurrency", "Use more threads"],
+    "correctAnswerIndex": 1,
+    "hint": "Priority inversion occurs when high-priority work waits for low-priority work holding a resource. GCD's QoS system and lock priority inheritance help prevent this, but careful architecture is essential."
+  },
+  {
+    "id": 6,
+    "question": "What is the purpose of Task-local values in Swift Concurrency?",
+    "options": ["Store local variables", "Propagate context through async call stack without explicit parameters", "Create tasks", "Handle errors"],
+    "correctAnswerIndex": 1,
+    "hint": "Task-local values (using @TaskLocal) provide a way to implicitly pass contextual information (like request IDs, user context) through async call chains without threading parameters through every function."
+  },
+  {
+    "id": 7,
+    "question": "What is ABI stability and why did it matter for Swift?",
+    "options": ["A testing tool", "Binary compatibility allowing apps to use newer Swift runtime without recompilation", "A design pattern", "A memory feature"],
+    "correctAnswerIndex": 1,
+    "hint": "ABI (Application Binary Interface) stability achieved in Swift 5 means the Swift runtime is now part of iOS, reducing app size and allowing Swift libraries to work across Swift versions without recompiling."
+  },
+  {
+    "id": 8,
+    "question": "How does Swift's method dispatch work for protocols, classes, and structs?",
+    "options": ["All use vtable", "Protocols use witness table, classes use vtable, structs use static dispatch", "All use static dispatch", "All use dynamic dispatch"],
+    "correctAnswerIndex": 1,
+    "hint": "Understanding dispatch mechanisms is crucial for performance: static dispatch (structs/final) is fastest, vtable dispatch (classes) allows polymorphism, witness tables (protocols) enable generic polymorphism but add indirection."
+  },
+  {
+    "id": 9,
+    "question": "What is the difference between String, Substring, and String slicing performance?",
+    "options": ["No difference", "Substring shares storage with original String using copy-on-write, avoiding copies", "Substring is slower", "String is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "Substring is a view into the original String's storage, making slicing O(1). However, holding Substrings can keep large Strings in memory, so convert to String for long-term storage."
+  },
+  {
+    "id": 10,
+    "question": "What is Module Stability and how does it differ from ABI Stability?",
+    "options": ["Same thing", "Module stability allows binary frameworks to work across Swift compiler versions", "Module stability is deprecated", "ABI is newer"],
+    "correctAnswerIndex": 1,
+    "hint": "While ABI stability enables runtime compatibility, module stability (via .swiftinterface files) allows binary frameworks compiled with one Swift version to be used by apps built with different Swift versions."
+  },
+  {
+    "id": 11,
+    "question": "How does Sendable protocol ensure thread safety in Swift Concurrency?",
+    "options": ["It doesn't", "Marks types safe to share across concurrency domains, enforced by compiler", "It's optional", "Only for actors"],
+    "correctAnswerIndex": 1,
+    "hint": "Sendable protocol and @Sendable attribute allow the compiler to verify that types (value types, actors, classes with locks) can be safely passed between isolation domains without data races."
+  },
+  {
+    "id": 12,
+    "question": "What is the MetaType (.self vs .Type) in Swift used for?",
+    "options": ["Metadata storage", "Accessing type information at runtime and creating instances dynamically", "A deprecated feature", "Error handling"],
+    "correctAnswerIndex": 1,
+    "hint": ".Type represents the metatype (type of a type), while .self gets the actual metatype value. Used for reflection, factory patterns, and generic type constraints where you need runtime type information."
+  },
+  {
+    "id": 13,
+    "question": "How do you implement a thread-safe Singleton without using locks?",
+    "options": ["Impossible", "Use static let with lazy initialization or dispatch_once equivalent", "Use multiple locks", "Avoid singletons"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift's static let properties are lazily initialized and thread-safe by default using dispatch_once. For class constants, this provides lock-free thread-safe initialization without performance overhead."
+  },
+  {
+    "id": 14,
+    "question": "What is Phantom Type and when would you use it?",
+    "options": ["A bug type", "A generic type parameter that doesn't have stored properties but adds type safety", "A memory type", "A deprecated pattern"],
+    "correctAnswerIndex": 1,
+    "hint": "Phantom types use generic parameters purely for compile-time type safety without runtime storage. Example: Request<Authenticated> vs Request<Unauthenticated> prevents mixing authenticated and unauthenticated requests at compile time."
+  },
+  {
+    "id": 15,
+    "question": "How does Swift's Automatic Reference Counting handle cycles in closures?",
+    "options": ["It doesn't", "Capture lists with weak/unowned break cycles, but developer must identify them", "Automatically breaks all cycles", "Uses garbage collection"],
+    "correctAnswerIndex": 1,
+    "hint": "ARC can't automatically detect closure-based retain cycles. Developers must use capture lists [weak self] or [unowned self] to break cycles when closures capture and are retained by the same object."
+  },
+  {
+    "id": 16,
+    "question": "What is the purpose of TaskGroup in structured concurrency?",
+    "options": ["Group tasks visually", "Manage dynamic number of concurrent child tasks with automatic cancellation", "Create task queues", "Handle errors only"],
+    "correctAnswerIndex": 1,
+    "hint": "TaskGroup provides structured concurrency for dynamic parallelism where you don't know the task count upfront. Child tasks are automatically cancelled when parent is cancelled, preventing orphaned work."
+  },
+  {
+    "id": 17,
+    "question": "How does iOS memory management differ for large objects vs small objects?",
+    "options": ["No difference", "Small objects use tagged pointers, large objects use heap allocation with reference counting", "Large objects are faster", "Small objects aren't tracked"],
+    "correctAnswerIndex": 1,
+    "hint": "Tagged pointers encode small values (like small NSNumbers, NSDate) directly in the pointer itself, avoiding heap allocation. This optimization is transparent but significantly improves performance and memory usage."
+  },
+  {
+    "id": 18,
+    "question": "What is the Swift runtime and how does it differ from Objective-C runtime?",
+    "options": ["They're identical", "Swift runtime is more static with witness tables, Objective-C uses message passing", "Swift has no runtime", "Objective-C runtime is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift's runtime uses witness tables and VTables for dispatch, providing better performance and type safety. Objective-C runtime uses dynamic message passing, enabling more runtime flexibility but with performance cost."
+  },
+  {
+    "id": 19,
+    "question": "How do you implement custom Codable for complex types with nested encoding strategies?",
+    "options": ["Can't customize", "Implement init(from:) and encode(to:) with custom CodingKeys enum", "Use only automatic synthesis", "Subclass Codable"],
+    "correctAnswerIndex": 1,
+    "hint": "Custom CodingKeys enum lets you map property names, while manual init(from:) and encode(to:) implementations allow custom logic for nested containers, polymorphic types, and complex transformations."
+  },
+  {
+    "id": 20,
+    "question": "What is the difference between Serial and Concurrent DispatchQueue and when to use each?",
+    "options": ["No difference", "Serial executes one task at a time (FIFO), Concurrent allows multiple simultaneous tasks", "Serial is deprecated", "Concurrent is always faster"],
+    "correctAnswerIndex": 1,
+    "hint": "Serial queues guarantee ordering and prevent data races for shared resources. Concurrent queues maximize throughput for independent tasks. Combine with barriers for reader-writer patterns on concurrent queues."
+  },
+  {
+    "id": 21,
+    "question": "How does Dynamic Member Lookup work and what are its use cases?",
+    "options": ["Automatic properties", "@dynamicMemberLookup enables dot syntax for dynamic property access via subscripts", "A deprecated feature", "Only for classes"],
+    "correctAnswerIndex": 1,
+    "hint": "This feature allows types to provide custom behavior for member lookups using subscript(dynamicMember:), useful for building type-safe wrappers, DSLs, or bridging to dynamic languages like Python or JavaScript."
+  },
+  {
+    "id": 22,
+    "question": "What is the purpose of NSCopying protocol and deep vs shallow copy?",
+    "options": ["To copy files", "NSCopying enables object duplication; shallow copies references, deep copies entire object graph", "Only for memory", "Deprecated in Swift"],
+    "correctAnswerIndex": 1,
+    "hint": "Shallow copy creates a new object but references the same child objects. Deep copy recursively copies the entire object graph. Critical for understanding collections, immutability, and preventing unintended mutations."
+  },
+  {
+    "id": 23,
+    "question": "How do you implement a custom Operation with dependencies and proper cancellation?",
+    "options": ["Subclass isn't needed", "Override main() or start(), check isCancelled, and use isFinished/isExecuting KVO", "Use closures only", "Operations can't be cancelled"],
+    "correctAnswerIndex": 1,
+    "hint": "Custom Operations require proper KVO notifications for isFinished/isExecuting, checking isCancelled throughout execution, and understanding concurrent vs non-concurrent operation implementations for complex workflows."
+  },
+  {
+    "id": 24,
+    "question": "What is Swift's Memory Ownership Model (consume, borrow, copy)?",
+    "options": ["Same as ARC", "Explicit control over value lifetime with consuming, borrowing, and copying operations", "A future feature", "Only for classes"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift's ownership features (consuming, borrowing) provide fine-grained control over value semantics, enabling optimizations by eliminating unnecessary copies and making ownership transfer explicit."
+  },
+  {
+    "id": 25,
+    "question": "How does App Thinning work (slicing, bitcode, on-demand resources)?",
+    "options": ["Just compression", "Delivers device-specific app variants, removing unused architectures and resources", "Deprecated feature", "Only for watchOS"],
+    "correctAnswerIndex": 1,
+    "hint": "App slicing creates device-specific variants. Bitcode allows Apple to reoptimize binaries. On-demand resources download assets when needed. Combined, they significantly reduce initial download size."
+  },
+  {
+    "id": 26,
+    "question": "What is the difference between KeyPath and ReferenceWritableKeyPath?",
+    "options": ["No difference", "KeyPath is read-only, ReferenceWritableKeyPath allows mutation on reference types", "KeyPath is deprecated", "ReferenceWritableKeyPath is slower"],
+    "correctAnswerIndex": 1,
+    "hint": "KeyPath hierarchy includes: KeyPath (read-only), WritableKeyPath (value types), ReferenceWritableKeyPath (reference types). Understanding these enables powerful abstractions, functional programming, and SwiftUI bindings."
+  },
+  {
+    "id": 27,
+    "question": "How does Swift handle Unicode and why is String indexing complex?",
+    "options": ["Simple byte indexing", "Strings are Unicode grapheme clusters requiring O(n) indexing for correctness", "Deprecated approach", "Uses only ASCII"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift's String is a collection of Unicode grapheme clusters (user-perceived characters), not bytes or code points. This ensures correctness for emoji, combining characters, but makes random access O(n) instead of O(1)."
+  },
+  {
+    "id": 28,
+    "question": "What is the purpose of AttributedString and how does it improve upon NSAttributedString?",
+    "options": ["Just a rename", "Type-safe, strongly-typed attributes with Locale/SwiftUI support", "Slower version", "Deprecated feature"],
+    "correctAnswerIndex": 1,
+    "hint": "AttributedString provides strongly-typed attribute keys, better Swift integration, Codable conformance, and SwiftUI support, replacing NSAttributedString's stringly-typed API while maintaining performance."
+  },
+  {
+    "id": 29,
+    "question": "How do you implement proper error handling in async/await chains?",
+    "options": ["Try-catch only", "Structured error handling with typed throws, async throws, and Result type", "Errors aren't supported", "Use completion handlers"],
+    "correctAnswerIndex": 1,
+    "hint": "Combine do-catch blocks with async throws functions, propagate errors naturally up the call stack, use Result type for storing outcomes, and consider custom error types with detailed context for debugging."
+  },
+  {
+    "id": 30,
+    "question": "What is the difference between Global Actors and regular Actors?",
+    "options": ["No difference", "Global actors (@MainActor) are singletons providing shared synchronization, actors are instances", "Global actors are deprecated", "Regular actors are faster"],
+    "correctAnswerIndex": 1,
+    "hint": "Global actors like @MainActor provide a single, globally-accessible serialization context. Regular actors are independent instances with their own isolation domains. Both prevent data races but serve different architectural needs."
+  }
+]

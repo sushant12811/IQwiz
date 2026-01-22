@@ -14,10 +14,12 @@ struct FinishedView: View {
     @State private var navigationPath = NavigationPath()
     @State private var showReview = false
     @Environment(\.verticalSizeClass) private var vSize
-
+    @AppStorage("audioOn") private var audioOn: Bool = true
 
     var body: some View {
         let regularSize = vSize == .regular
+        let currentScore = viewModel.scores[viewModel.quizLevel ?? .iosJunior, default: 0]
+
         
         ScrollView {
             VStack{
@@ -39,7 +41,7 @@ struct FinishedView: View {
                 }
                 //Users- Level
                 Text(
-                    "✨\(RankedUser.rank(for: viewModel.score, with: viewModel.quiz.count).rawValue.capitalized)✨"
+                    "✨\(RankedUser.rank(for: currentScore, with: viewModel.quiz.count).rawValue.capitalized)✨"
                 )
                 .font(
                     .system(
@@ -55,16 +57,16 @@ struct FinishedView: View {
                     .font(regularSize ? .largeTitle :  .title2)
                     .padding()
                 //Score
-                Text("Your Score: \(viewModel.score)")
+                Text("Your Score: \(currentScore)")
                     .font(regularSize ? .title : .title2)
         
                 HStack(spacing: 30){
                     //Restart- button
                     Button("Restart"){
-                        viewModel.restartQuiz()
+                        viewModel.startQuiz(level: viewModel.quizLevel ?? .iosMid )
                     }
                     .buttonModifier(
-                        foreground: .button,
+                        foreground: .customOrange,
                         backgroundClr: .optionsBlue,
                         font: regularSize ? .title2 : .title3
                     )
@@ -73,7 +75,7 @@ struct FinishedView: View {
                         showReview = true
                     }
                     .buttonModifier(
-                        foreground: .button,
+                        foreground: .customOrange,
                         backgroundClr: .optionsBlue,
                         font: regularSize ? .title2 : .title3
                     )
@@ -85,7 +87,7 @@ struct FinishedView: View {
                     
                 }
                 .buttonModifier(
-                    foreground: .button,
+                    foreground: .customOrange,
                     backgroundClr: .optionsBlue,
                     font: regularSize ? .title2 : .title3
                 )
@@ -96,8 +98,10 @@ struct FinishedView: View {
                 maxHeight: regularSize ? .infinity : 250
             )
             .onAppear {
+            
                 audioPlayerManager
                     .playSound(soundName: "finished", soundType: "mp3")
+                audioPlayerManager.setAudio(enabled: audioOn)
                 
             }
             .sheet(isPresented: $showReview) {
@@ -111,5 +115,5 @@ struct FinishedView: View {
 #Preview {
     FinishedView()
         .environment(AudioPlayerManager())
-        .environment(ViewModel())
+        .environment(ViewModel(level: .iosJunior))
 }

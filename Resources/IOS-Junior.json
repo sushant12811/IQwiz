@@ -358,5 +358,247 @@
     ],
     "correctAnswerIndex": 0,
     "hint": "Swift uses the standard mathematical symbol for addition."
-  }
+  },
+    {
+      "id": 31,
+      "question": "What is the difference between 'let' and 'var' in Swift?",
+      "options": [
+        "'let' is for constants, 'var' is for variables",
+        "'let' is for variables, 'var' is for constants",
+        "'let' is for classes, 'var' is for structs",
+        "There is no difference"
+      ],
+      "correctAnswerIndex": 0,
+      "hint": "Think about which keyword allows you to change the value after initialization."
+    },
+    {
+      "id": 32,
+      "question": "Which of these is a value type in Swift?",
+      "options": [
+        "Class",
+        "Closure",
+        "Struct",
+        "Function"
+      ],
+      "correctAnswerIndex": 2,
+      "hint": "Value types create a copy when assigned or passed around, unlike reference types."
+    },
+    {
+      "id": 33,
+      "question": "What does the 'guard' statement do?",
+      "options": [
+        "Protects against memory leaks",
+        "Provides early exit from a scope if a condition isn't met",
+        "Guards against type casting errors",
+        "Prevents race conditions"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "Guard is often used to unwrap optionals and exit early if the condition fails."
+    },
+    {
+      "id": 34,
+      "question": "What is optional chaining in Swift?",
+      "options": [
+        "A way to create linked lists",
+        "A process to safely access properties of optional values",
+        "A method to chain multiple optionals together",
+        "A way to make all properties optional"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "It uses the '?' operator to safely access properties that might be nil."
+    },
+    {
+      "id": 35,
+      "question": "What keyword is used to make a property observable in SwiftUI?",
+      "options": [
+        "@Observable",
+        "@State",
+        "@Binding",
+        "@Published"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "This property wrapper is used for simple values within a SwiftUI view."
+    },
+    {
+      "id": 36,
+      "question": "What does the 'mutating' keyword indicate?",
+      "options": [
+        "The function can change the instance it belongs to",
+        "The function returns a mutated copy",
+        "The function is thread-safe",
+        "The function can only be called once"
+      ],
+      "correctAnswerIndex": 0,
+      "hint": "This keyword is required for methods in structs that modify properties."
+    },
+    {
+      "id": 37,
+      "question": "Which collection type stores unique values in Swift?",
+      "options": [
+        "Array",
+        "Dictionary",
+        "Set",
+        "Tuple"
+      ],
+      "correctAnswerIndex": 2,
+      "hint": "This collection type doesn't allow duplicate values and has no specific order."
+    },
+    {
+      "id": 38,
+      "question": "What is the purpose of 'weak' reference?",
+      "options": [
+        "To make variables optional",
+        "To prevent retain cycles",
+        "To improve performance",
+        "To make properties immutable"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "It's commonly used in closures and delegates to avoid memory leaks."
+    },
+    {
+      "id": 39,
+      "question": "What does the nil-coalescing operator (??) do?",
+      "options": [
+        "Creates an optional value",
+        "Unwraps an optional forcefully",
+        "Provides a default value if an optional is nil",
+        "Checks if a value is nil"
+      ],
+      "correctAnswerIndex": 2,
+      "hint": "Think: 'optional value ?? default value'"
+    },
+    {
+      "id": 40,
+      "question": "What is the main difference between a struct and a class?",
+      "options": [
+        "Structs can't have methods",
+        "Structs are value types, classes are reference types",
+        "Classes can't inherit",
+        "Structs are faster"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "When you assign a struct, you get a copy. When you assign a class, you get a reference."
+    },
+    {
+      "id": 41,
+      "question": "What does 'defer' statement do?",
+      "options": [
+        "Delays execution by a specified time",
+        "Executes code just before leaving the current scope",
+        "Creates a background task",
+        "Prevents immediate execution"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "Useful for cleanup code that should run no matter how you exit a function."
+    },
+    {
+      "id": 42,
+      "question": "What is the purpose of an extension in Swift?",
+      "options": [
+        "To extend file types",
+        "To add functionality to existing types",
+        "To increase memory allocation",
+        "To extend variable lifetimes"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "You can add methods to existing types like String or Int without subclassing."
+    },
+    {
+      "id": 43,
+      "question": "What does the 'final' keyword prevent?",
+      "options": [
+        "Variable reassignment",
+        "Class inheritance or method overriding",
+        "Optional unwrapping",
+        "Memory leaks"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "Used on classes or methods to prevent subclasses from changing behavior."
+    },
+    {
+      "id": 44,
+      "question": "What is a computed property?",
+      "options": [
+        "A property calculated at compile time",
+        "A property that calculates its value each time it's accessed",
+        "A property stored in memory",
+        "A property with automatic getters and setters"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "It has a 'get' block and optionally a 'set' block, but doesn't store a value directly."
+    },
+    {
+      "id": 45,
+      "question": "What does 'self' refer to in Swift?",
+      "options": [
+        "The parent class",
+        "The current instance",
+        "The global scope",
+        "The static context"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "It's similar to 'this' in other programming languages."
+    },
+    {
+      "id": 46,
+      "question": "What is the purpose of the 'as?' operator?",
+      "options": [
+        "To force cast a type",
+        "To attempt a conditional cast that returns an optional",
+        "To check type equality",
+        "To convert types automatically"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "It returns nil if the cast fails, making it safer than forced casting."
+    },
+    {
+      "id": 47,
+      "question": "What is a closure in Swift?",
+      "options": [
+        "A way to close files",
+        "A self-contained block of functionality that can be passed around",
+        "A method that closes connections",
+        "A class initialization method"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "Similar to lambdas or anonymous functions in other languages."
+    },
+    {
+      "id": 48,
+      "question": "What does the 'override' keyword indicate?",
+      "options": [
+        "A method replaces a method from the superclass",
+        "A method cannot be changed",
+        "A method is private",
+        "A method is static"
+      ],
+      "correctAnswerIndex": 0,
+      "hint": "Required when you want to provide a new implementation of an inherited method."
+    },
+    {
+      "id": 49,
+      "question": "What is the difference between '==' and '===' operators?",
+      "options": [
+        "No difference",
+        "'==' checks value equality, '===' checks reference identity",
+        "'==' is for strings, '===' is for numbers",
+        "'===' is deprecated"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "'===' checks if two references point to the exact same instance in memory."
+    },
+    {
+      "id": 50,
+      "question": "What is lazy initialization?",
+      "options": [
+        "Slow performance",
+        "A property that isn't calculated until first accessed",
+        "A type of loop",
+        "Delayed app launch"
+      ],
+      "correctAnswerIndex": 1,
+      "hint": "Use the 'lazy' keyword before a property declaration to defer its initialization."
+    }
+  
+  
 ]
