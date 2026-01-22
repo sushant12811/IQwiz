@@ -1,5 +1,5 @@
 //
-//  LevelCardView.swift
+//  QuizLevelCard.swift
 //  IQwiz
 //
 //  Created by Sushant Dhakal on 2026-01-05.
@@ -7,57 +7,92 @@
 
 import SwiftUI
 
-struct LevelCardView: View {
-    let title: String
-    let score: String
-    let color: Color
-    @Environment(\.verticalSizeClass) var vSize
-    @Environment(ViewModel.self) var viewModel
-    let onTap: () -> Void
+struct QuizLevelCard: View {
+    let level: QuizLevel
+    @ObservedObject var progressManager: QuizProgressManager
+    @State private var showQuiz = false
+    @AppStorage("showPulse") private var showPulse: Bool = true
+
+    
+    var isUnlocked: Bool {
+        progressManager.isLevelUnlocked(level)
+    }
+    
+    var levelTitle: String {
+        switch level {
+        case .iosJunior: return "Junior Level"
+        case .iosMid: return "Mid Level"
+        case .iosSenior: return "Senior Level"
+        }
+    }
+    
+    var levelColor: Color {
+        switch level {
+        case .iosJunior: return .green
+        case .iosMid: return .orange
+        case .iosSenior: return .red
+        }
+    }
+    
+    var levelBackgroundColor: Color {
+        switch level {
+        case .iosJunior: return .green.opacity(0.1)
+        case .iosMid: return .orange.opacity(0.1)
+        case .iosSenior: return .red.opacity(0.1)
+        }
+    }
     
     var body: some View {
-        let regularSize = vSize == .regular
-
-        ZStack(alignment: .bottom ){
-            color
-            VStack {
-                Spacer()
-                Button(title) {
-                    onTap()
+        Button(action: {
+            if isUnlocked {
+                showQuiz = true
+                showPulse = false
+            }
+        }) {
+            HStack {
+                VStack(alignment: .leading, spacing: 8) {
+                    HStack {
+                        Image(systemName: isUnlocked ? "checkmark.circle.fill" : "lock.fill")
+                            .foregroundColor(isUnlocked ? levelColor : .gray)
+                        
+                        Text(levelTitle)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(isUnlocked ? .primary : .gray)
+                    }
+                    
+                    if isUnlocked {
+                        Text("Best Score: \(progressManager.getScore(for: level))")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    } else {
+                        Text("Complete previous level to unlock")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
                 }
-                .buttonModifier(foreground: .customOrange, backgroundClr: .optionsBlue, font: .title2)
-                .padding()
-
+                
                 Spacer()
-
-                Text(score)
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
-                    .frame(maxWidth: .infinity)
-                    .padding(10)
-                    .background(.gray.opacity(0.5))
+                
+                Image(systemName: "chevron.right")
+                    .foregroundColor(isUnlocked ? levelColor : .gray)
             }
-//            .overlay {
-//                RoundedRectangle(cornerRadius: 20)
-//                    .fill(color)
-//            }
-            }
-            .frame(width: regularSize ? 160 : 300 , height: regularSize ? 200 : 180)
-            .background(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.gray.opacity(0.5), lineWidth: 15)
-                    .fill(Color.background)
-                    .shadow(color:Color.black.opacity(0.4), radius: 2)
-            )
             .padding()
-        
-        
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(isUnlocked ? levelBackgroundColor : Color.gray.opacity(0.1))
+                    .shadow(color: isUnlocked ? levelColor.opacity(0.3) : .clear, radius: 8, x: 0, y: 4)
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(isUnlocked ? levelColor : Color.gray.opacity(0.3), lineWidth: 2)
+            )
         }
-        
-        
-    
-}
-
-#Preview {
-    LevelCardView(title: "Mid-Level", score: "100", color: .clear, onTap: {})
+        .disabled(!isUnlocked)
+        .fullScreenCover(isPresented: $showQuiz) {
+            QuizView(level: level)
+                .environmentObject(progressManager)
+        }
+        .pulse(isUnlocked && showPulse)
+    }
 }

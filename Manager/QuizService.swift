@@ -9,14 +9,19 @@ import SwiftUI
 
 
 //MARK: JSON BUNDLE CONFIG
-protocol QuizService{
-    func loadData() throws-> [Quiz]
-}
 
-struct BundleService: QuizService{
+enum QuizLevel: String, Codable{
+    case iosJunior = "IOS-Junior"
+    case iosMid = "IOS-Mid"
+    case iosSenior = "IOS-Senior"
+         
+}
+struct QuizService{
     
-    func loadData() throws-> [Quiz]{
-        guard let url = Bundle.main.url(forResource: "QuizQuestions", withExtension: "json") else {
+    static let shared = QuizService()
+    
+    func loadData(for level: QuizLevel) throws-> [Quiz]{
+        guard let url = Bundle.main.url(forResource: level.rawValue, withExtension: "json") else {
             throw ConfigErrors.noData
         }
         

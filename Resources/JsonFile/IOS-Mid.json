@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "question": "What is the purpose of the Combine framework?",
+    "options": ["To combine view controllers", "To handle asynchronous events with declarative Swift API", "To merge code files", "To combine multiple apps"],
+    "correctAnswerIndex": 1,
+    "hint": "Apple's reactive programming framework that processes values over time using publishers and subscribers, similar to RxSwift."
+  },
+  {
+    "id": 2,
+    "question": "What is the difference between 'weak' and 'unowned' references?",
+    "options": ["No difference", "Weak becomes nil, unowned crashes if accessed after deallocation", "Unowned is stronger than weak", "Weak is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "Use 'weak' when the reference might become nil (optional). Use 'unowned' when you're certain it will never be nil during its lifetime (non-optional)."
+  },
+  {
+    "id": 3,
+    "question": "What is method swizzling in iOS?",
+    "options": ["A design pattern", "Changing implementation of methods at runtime", "A type of animation", "A testing technique"],
+    "correctAnswerIndex": 1,
+    "hint": "This Objective-C runtime technique swaps method implementations, often used for debugging or adding functionality to existing classes without subclassing."
+  },
+  {
+    "id": 4,
+    "question": "What is the purpose of OperationQueue?",
+    "options": ["Store operations", "Manage concurrent execution of tasks with dependencies", "Queue network requests", "Handle UI updates"],
+    "correctAnswerIndex": 1,
+    "hint": "Higher-level abstraction over GCD that allows you to set dependencies, priorities, and cancellation for concurrent operations."
+  },
+  {
+    "id": 5,
+    "question": "What is the MVVM design pattern?",
+    "options": ["Model View View Model", "Multiple View Variable Manager", "Main View Visual Model", "Model Variable View Maker"],
+    "correctAnswerIndex": 0,
+    "hint": "This pattern separates business logic into a ViewModel layer between Model and View, making code more testable and SwiftUI-friendly."
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between synchronous and asynchronous execution?",
+    "options": ["No difference", "Sync blocks thread until complete, async returns immediately", "Async is slower", "Sync is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "Synchronous execution waits for tasks to finish before continuing. Asynchronous execution starts tasks and continues without waiting."
+  },
+  {
+    "id": 7,
+    "question": "What is Core Data?",
+    "options": ["A database engine", "Apple's object graph and persistence framework", "A networking framework", "A data validation tool"],
+    "correctAnswerIndex": 1,
+    "hint": "This framework manages the model layer of your application, providing object lifecycle management, persistence, and powerful querying capabilities."
+  },
+  {
+    "id": 8,
+    "question": "What is the purpose of protocols with associated types?",
+    "options": ["To associate classes", "To create generic protocols with placeholder types", "To link protocols together", "To improve performance"],
+    "correctAnswerIndex": 1,
+    "hint": "Associated types (using 'associatedtype') allow protocols to define placeholder types that conforming types specify, enabling generic protocol requirements."
+  },
+  {
+    "id": 9,
+    "question": "What is the Responder Chain in iOS?",
+    "options": ["A security feature", "A hierarchy for handling events and actions", "A network protocol", "A memory management system"],
+    "correctAnswerIndex": 1,
+    "hint": "Events travel up this chain from the first responder through view hierarchy to view controller, window, and app delegate until handled."
+  },
+  {
+    "id": 10,
+    "question": "What is the purpose of the @escaping attribute?",
+    "options": ["To escape errors", "To indicate a closure outlives the function scope", "To exit loops early", "To avoid retain cycles"],
+    "correctAnswerIndex": 1,
+    "hint": "Mark closures as @escaping when they're stored for later execution, like completion handlers in asynchronous operations."
+  },
+  {
+    "id": 11,
+    "question": "What is Key-Value Observing (KVO)?",
+    "options": ["A design pattern", "A mechanism to notify objects about property changes", "A debugging tool", "A storage system"],
+    "correctAnswerIndex": 1,
+    "hint": "This Objective-C mechanism allows objects to observe changes to properties of other objects, though Combine and property observers are more Swift-friendly."
+  },
+  {
+    "id": 12,
+    "question": "What is the difference between a frame and bounds?",
+    "options": ["They're the same", "Frame is position in superview, bounds is position in own coordinate system", "Frame is deprecated", "Bounds is always larger"],
+    "correctAnswerIndex": 1,
+    "hint": "Frame describes position and size relative to the superview. Bounds describes size and content area in its own coordinate system (origin usually 0,0)."
+  },
+  {
+    "id": 13,
+    "question": "What is Dependency Injection?",
+    "options": ["Injecting bugs", "Providing dependencies from outside rather than creating them internally", "A memory leak", "A testing framework"],
+    "correctAnswerIndex": 1,
+    "hint": "This design pattern passes dependencies to objects rather than having them create dependencies, improving testability and decoupling."
+  },
+  {
+    "id": 14,
+    "question": "What is the purpose of Result type in Swift?",
+    "options": ["To store test results", "To represent success or failure with associated values", "To validate data", "To improve performance"],
+    "correctAnswerIndex": 1,
+    "hint": "Result<Success, Failure> is an enum that encapsulates either a successful value or an error, making error handling more explicit than throwing functions."
+  },
+  {
+    "id": 15,
+    "question": "What is the difference between URLSession.shared and custom URLSession?",
+    "options": ["No difference", "Shared has no configuration, custom allows custom cache and timeout policies", "Shared is faster", "Custom is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "URLSession.shared is a singleton with default configuration. Custom sessions allow you to configure caching, timeouts, and delegate handling."
+  },
+  {
+    "id": 16,
+    "question": "What is protocol-oriented programming?",
+    "options": ["Using only protocols", "Designing code around protocols rather than class inheritance", "A networking technique", "A testing methodology"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift encourages composition over inheritance by using protocols with extensions, allowing value types to gain shared behavior."
+  },
+  {
+    "id": 17,
+    "question": "What is the purpose of lazy var?",
+    "options": ["To make variables slow", "To defer property initialization until first access", "To create optional properties", "To improve memory"],
+    "correctAnswerIndex": 1,
+    "hint": "Lazy properties aren't calculated until first use, useful for expensive computations or when initial values depend on external factors."
+  },
+  {
+    "id": 18,
+    "question": "What is the Coordinator pattern?",
+    "options": ["A layout pattern", "A navigation pattern that separates flow logic from view controllers", "A concurrency pattern", "A data pattern"],
+    "correctAnswerIndex": 1,
+    "hint": "Coordinators handle navigation flow, removing navigation logic from view controllers and making them more reusable and testable."
+  },
+  {
+    "id": 19,
+    "question": "What is the difference between dispatchQueue.sync and dispatchQueue.async?",
+    "options": ["No difference", "sync blocks current thread, async doesn't", "async is slower", "sync is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "sync() waits for the task to complete before returning (can cause deadlocks). async() submits the task and returns immediately."
+  },
+  {
+    "id": 20,
+    "question": "What is Copy-on-Write in Swift?",
+    "options": ["A memory bug", "An optimization where copies share memory until modified", "A design pattern", "A file operation"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift collections use this optimization - multiple copies share the same storage until one is modified, improving performance for value types."
+  },
+  {
+    "id": 21,
+    "question": "What is the purpose of property wrappers?",
+    "options": ["To wrap gifts", "To add behavior to property storage and access", "To encrypt data", "To optimize memory"],
+    "correctAnswerIndex": 1,
+    "hint": "Property wrappers (like @State, @Published) encapsulate common property patterns, reducing boilerplate code for validation, observation, or storage."
+  },
+  {
+    "id": 22,
+    "question": "What is the difference between value semantics and reference semantics?",
+    "options": ["No difference", "Value types are copied, reference types are shared", "Value semantics is faster", "Reference semantics is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "Structs and enums have value semantics (copied on assignment). Classes have reference semantics (multiple references to same instance)."
+  },
+  {
+    "id": 23,
+    "question": "What is the Repository pattern?",
+    "options": ["A Git feature", "An abstraction layer between data sources and business logic", "A UI pattern", "A testing pattern"],
+    "correctAnswerIndex": 1,
+    "hint": "This pattern provides a clean API for data access, hiding whether data comes from network, database, or cache behind a unified interface."
+  },
+  {
+    "id": 24,
+    "question": "What is the purpose of async/await in Swift?",
+    "options": ["To wait for users", "To write asynchronous code in a sequential, readable manner", "To slow down code", "To handle errors"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift's structured concurrency feature lets you write asynchronous code that looks synchronous, avoiding callback hell and improving readability."
+  },
+  {
+    "id": 25,
+    "question": "What is the difference between NSCache and Dictionary?",
+    "options": ["No difference", "NSCache automatically evicts objects under memory pressure", "Dictionary is faster", "NSCache is deprecated"],
+    "correctAnswerIndex": 1,
+    "hint": "NSCache is thread-safe and automatically removes objects when memory is low, making it ideal for caching expensive objects like images."
+  },
+  {
+    "id": 26,
+    "question": "What is the purpose of Generic Constraints?",
+    "options": ["To limit performance", "To restrict generic types to specific protocols or classes", "To create errors", "To optimize code"],
+    "correctAnswerIndex": 1,
+    "hint": "Using 'where' clauses or type constraints (T: Protocol), you can require generic types to conform to protocols or inherit from classes."
+  },
+  {
+    "id": 27,
+    "question": "What is the Singleton pattern and when should you use it?",
+    "options": ["Multiple instances", "A class with exactly one instance accessible globally", "A deprecated pattern", "A testing pattern"],
+    "correctAnswerIndex": 1,
+    "hint": "Use singletons sparingly for truly global resources (like URLSession.shared), as they can make testing difficult and hide dependencies."
+  },
+  {
+    "id": 28,
+    "question": "What is the difference betweenmap, flatMap, and compactMap?",
+    "options": ["They're identical", "map transforms, flatMap flattens nested collections, compactMap removes nils", "map is deprecated", "They're for different types"],
+    "correctAnswerIndex": 1,
+    "hint": "map transforms each element. flatMap transforms and flattens one level. compactMap transforms and removes nil values from results."
+  },
+  {
+    "id": 29,
+    "question": "What is the Actor model in Swift?",
+    "options": ["A UI component", "A reference type that protects mutable state from data races", "A design pattern", "A deprecated feature"],
+    "correctAnswerIndex": 1,
+    "hint": "Actors (introduced in Swift 5.5) ensure safe access to their properties by serializing access, preventing data races in concurrent code."
+  },
+  {
+    "id": 30,
+    "question": "What is the purpose of custom operators in Swift?",
+    "options": ["To confuse developers", "To define new operators or overload existing ones for custom types", "To improve performance", "To handle errors"],
+    "correctAnswerIndex": 1,
+    "hint": "Swift allows defining custom infix, prefix, and postfix operators, though use them sparingly as they can reduce code readability if overused."
+  }
+]

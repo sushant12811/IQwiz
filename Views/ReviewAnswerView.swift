@@ -7,39 +7,89 @@
 
 import SwiftUI
 
-struct ReviewAnswerView: View {
-    @Environment(ViewModel.self) var viewModel: ViewModel
+struct ReviewAnswersView: View {
+    let questions: [Quiz]
+    let userAnswers: [Int?]
+    let onClose: () -> Void
     
     var body: some View {
-        VStack {
-            Text("Review Your Answers")
-                .font(.largeTitle.bold())
-                .padding()
+        NavigationView {
             ScrollView {
-                LazyVStack{
-                    ForEach(viewModel.quiz, id: \.id) { question in
-                        let index = viewModel.quiz.firstIndex(where: { $0.id == question.id }) ?? 0
-                        //Questions
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text(question.question)
-                                .font(.headline)
-                            //Answers
-                            ForEach(question.options.indices, id: \.self) { optionIndex in
-                                Text(question.options[optionIndex])
-                                    .optionButtonModifier(color: viewModel.reviewOptionColor(questionIndex: index, optionIndex: optionIndex), selected: viewModel.currentIndex)
-                            }
-                        }
-                        .padding()
+                LazyVStack(spacing: 16) {
+                    ForEach(questions.indices, id: \.self) { index in
+                        ReviewAnswerCard(
+                            questionNumber: index + 1,
+                            question: questions[index],
+                            userAnswer: index < userAnswers.count ? userAnswers[index] : nil
+                        )
                     }
+                }
+                .padding()
+            }
+            .navigationTitle("Review Answers")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Done") {
+                        onClose()
+                    }
+                    .tint(.primary)
                 }
             }
         }
     }
 }
-       
 
 
-#Preview {
-    ReviewAnswerView()
-        .environment(ViewModel())
+
+// MARK: - Review Option View
+struct ReviewOptionView: View {
+    let text: String
+    let isUserAnswer: Bool
+    let isCorrectAnswer: Bool
+    
+    var backgroundColor: Color {
+        if isCorrectAnswer {
+            return Color.green.opacity(0.2)
+        } else if isUserAnswer {
+            return Color.red.opacity(0.2)
+        }
+        return Color.gray.opacity(0.05)
+    }
+    
+    var borderColor: Color {
+        if isCorrectAnswer {
+            return .green
+        } else if isUserAnswer {
+            return .red
+        }
+        return .gray.opacity(0.3)
+    }
+    
+    var body: some View {
+        HStack {
+            Text(text)
+                .font(.body)
+                .foregroundColor(.primary)
+            
+            Spacer()
+            
+            if isCorrectAnswer {
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.green)
+            } else if isUserAnswer {
+                Image(systemName: "xmark.circle.fill")
+                    .foregroundColor(.red)
+            }
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(backgroundColor)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(borderColor, lineWidth: isUserAnswer || isCorrectAnswer ? 2 : 1)
+        )
+    }
 }

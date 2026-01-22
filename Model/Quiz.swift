@@ -36,13 +36,31 @@ struct Quiz: Codable{
              hint: "Hint"
             )
     ]
-    
 }
-
-struct QuizProgress: Codable {
-    var currentIndex: Int
-    var answers: [Int?]
-    var score: Int
-    var isFinished: Bool
+enum DisplayMode: String, Hashable, CaseIterable{
+    case light, dark, system
+    
+    var icon: String{
+        switch self {
+        case .light :
+            "sun.max.fill"
+        case .dark:
+            "moon.stars.fill"
+        case .system:
+            "circle.lefthalf.filled"
+        }
+    }
+    
+    var colorMode: ColorScheme? {
+        switch self {
+        case .light:
+            return .light
+        case .dark:
+            return .dark
+        case .system:
+            return .none
+        }
+    }
+    
 }
 

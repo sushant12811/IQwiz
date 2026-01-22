@@ -1,3 +1,9 @@
+//
+//  LevelSelectionView.swift
+//  IQwiz
+//
+//  Created by Sushant Dhakal on 2025-12-22.
+//
 
 
 import SwiftUI
@@ -5,10 +11,16 @@ import SwiftUI
 struct LevelSelectionView: View {
     @StateObject private var progressManager = QuizProgressManager()
     @Environment(\.verticalSizeClass) private var vSizeClass
+    @State private var showOnBoardView: Bool = false
    
     var body: some View {
         NavigationStack {
             ScrollView{
+                if showOnBoardView{
+                    OnboardingView {
+                       showOnBoardView = true
+                    }
+                }
 
             VStack(spacing: 20) {
                 if vSizeClass == .regular{
@@ -23,7 +35,7 @@ struct LevelSelectionView: View {
                             level: .iosJunior,
                             progressManager: progressManager
                         )
-                        
+
                         QuizLevelCard(
                             level: .iosMid,
                             progressManager: progressManager
